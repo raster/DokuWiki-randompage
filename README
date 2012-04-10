@@ -11,6 +11,8 @@ Jean Marc Massou did all the original code, I just cleaned it up so it would wor
 
 I did email him about it, but I figured I should also publish the code in case someone else wanted to use it.
 
+I also changed it from being named 'random_page' to 'randompage' 
+
 (Hooray for open source.)
 
 This code is released under the GPL. 
