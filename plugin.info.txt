@@ -1,4 +1,4 @@
-base   Pandom Page
+base   Random Page
 author Pete Prodoehl
 email  pete@2xlnetworks.com
 date   2012-04-09
