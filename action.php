@@ -49,7 +49,7 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 		$id = rtrim($data[array_rand($data, 1)]);
 		$testACL = auth_aclcheck($id,$_SERVER['REMOTE_USER'],$USERINFO['grps']);
 	
-		if ($testACL > 1){
+		if (($testACL > 1) and (file_exists(wikiFN($id)))){
 			$i="ok";
 			//echo $id;
 		}
