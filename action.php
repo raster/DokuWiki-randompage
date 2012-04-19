@@ -46,7 +46,7 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 		//echo $i;
 			$i++;
 	
-		$id = $data[array_rand($data, 1)];
+		$id = rtrim($data[array_rand($data, 1)]);
 		$testACL = auth_aclcheck($id,$_SERVER['REMOTE_USER'],$USERINFO['grps']);
 	
 		if ($testACL > 1){

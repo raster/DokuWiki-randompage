@@ -7,6 +7,8 @@ But it didn't work.
 
 So I poked at it a bit... and now it works.
 
+(I even fixed the URLs it returns.)
+
 Jean Marc Massou did all the original code, I just cleaned it up so it would work.
 
 I did email him about it, but I figured I should also publish the code in case someone else wanted to use it.
