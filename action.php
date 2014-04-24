@@ -34,6 +34,7 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 	
 		global $conf;
 		global $ID;
+		global $USERINFO;
 		
 		$data = array();
 		$dir = $conf['savedir'];
