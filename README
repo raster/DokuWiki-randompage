@@ -24,3 +24,13 @@ pete@rasterweb.net
 http://rasterweb.net/raster/
 Twitter: @raster
 
+
+# Added nsrandompage
+
+usage
+
+?do=randompage
+
+or
+
+?do=nsrandompage

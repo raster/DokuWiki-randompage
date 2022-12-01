@@ -1,7 +1,7 @@
-base   Random Page
-author Pete Prodoehl
+base   randompage
+author Jean Marc Massou, Pete Prodoehl
 email  pete@2xlnetworks.com
-date   2012-04-19
+date   2022-12-02
 name   randompage plugin
 desc   Pick a random Page and display it like MediaWiki
-url    http://2xlnetworks.com/
+url    https://www.dokuwiki.org/plugin:random_page
