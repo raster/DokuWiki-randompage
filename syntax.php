@@ -44,7 +44,8 @@ public function getType(){ return 'formatting'; }
             list($state, $match) = $data;
             switch ($state) {
                 case DOKU_LEXER_ENTER :
-                    // <a href="$ID?do=randompage">
+                    // <a href="$ID&do=randompage">   
+                    // link: ...doku.php?id=sidebar&do=randompage
                     $renderer->doc .= '<a href="'.wl($ID, array('do' => 'randompage'), true).'">'; 
                     break;
                 case DOKU_LEXER_UNMATCHED :  
