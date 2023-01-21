@@ -15,8 +15,8 @@ class syntax_plugin_randompage extends DokuWiki_Syntax_Plugin {
 public function getType(){ return 'formatting'; }
     public function getAllowedTypes() { return array('formatting', 'substition', 'disabled'); }   
     public function getSort(){ return 158; }
-    public function connectTo($mode) { $this->Lexer->addEntryPattern('<randompage_link>(?=.*?</randompage_link>)',$mode,'plugin_randompage'); }
-    public function postConnect() { $this->Lexer->addExitPattern('</randompage_link>','plugin_randompage'); }
+    public function connectTo($mode) { $this->Lexer->addEntryPattern('<randompage_syntax>(?=.*?</randompage_syntax>)',$mode,'plugin_randompage'); }
+    public function postConnect() { $this->Lexer->addExitPattern('</randompage_syntax>','plugin_randompage'); }
  
  
     /**

@@ -1,4 +1,4 @@
-# dokuwiki randompage
+# DokuWiki Random Page
 
 My goal is to have the same function as MediaWiki's Random Page.
 
@@ -6,11 +6,17 @@ I use the search functions to have an array of files and output a random page of
 
 ## Usage
 
+You can paste this line of code into the sidebar page to use.
+
+```html
+<randompage_syntax>Random Page</randompage_syntax>
+```
+
+
+
 ```
 ?do=randompage
 ```
-
-or
 
 ```
 ?do=nsrandompage
