@@ -4,6 +4,8 @@ My goal is to have the same function as MediaWiki's Random Page.
 
 I use the search functions to have an array of files and output a random page of this array.
 
+工作原理：从dokuwiki\data\index\page.idx文件中读取页面，然后随机显示。有个不好的地方，页面删除后，此文件中的页面名称列表似乎不会立即发生变化。
+
 ## Usage
 
 You can paste this line of code into the sidebar page to use.
