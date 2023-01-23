@@ -20,7 +20,7 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 	function init(Doku_Event $event, $args)
 	{
 		// Catch the good request
-		if ($_REQUEST['do'] == 'randompage') {
+		if ($_REQUEST['do'] == 'randompage'|| $_REQUEST['do'] == 'nsrandompage' ) {
 			// On efface les headers par defaut
 			if ($args == 'header') {
 				$this->action_randompage($event, $args);
@@ -34,11 +34,21 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 	
 		global $conf;
 		global $ID;
-		
+        	global $INFO;		
 		$data = array();
 		$dir = $conf['savedir'];
 		
 		$data = file ($dir.'/index/page.idx');
+
+		//if current page is in 
+		function isCurNS($value){
+			global $INFO;
+            	return stripos($value, $INFO['namespace'])===0 ? true : false;
+		}
+		
+       		if ($INFO['namespace']!=null && $_REQUEST['do'] == 'nsrandompage' ) { 
+			$data=array_filter($data,"isCurNS" );
+       		}
 		
 		//We loops through ten random page...
 		$i = 1;
