@@ -12,12 +12,12 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 	/**
 	* Register its handlers with the dokuwiki's event controller
 	*/
-	function register(&$controller) {
+	function register(Doku_Event_Handler $controller) {
 		$controller->register_hook('ACTION_HEADERS_SEND', 'BEFORE', $this, 'init', 'header');
 	}
 
 
-	function init(&$event, $args)
+	function init(Doku_Event $event, $args)
 	{
 		// Catch the good request
 		if ($_REQUEST['do'] == 'randompage') {
@@ -30,7 +30,7 @@ class action_plugin_randompage extends Dokuwiki_Action_Plugin {
 	}
 
 
-	function action_randompage(&$event, $args) {
+	function action_randompage(Doku_Event $event, $args) {
 	
 		global $conf;
 		global $ID;
